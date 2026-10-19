@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buy Once Home &amp; Office</title>
+<meta name="description" content="Durable home and office picks, chosen to last for years.">
+<meta name="color-scheme" content="light dark">
+<!-- Pinterest site claim (optional, later): paste the meta tag Pinterest gives you on the next line and delete these comment marks.
+<meta name="p:domain_verify" content="PASTE_CODE_HERE">
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f1f3f0; --card:#fbfbf9; --ink:#172544; --ink-soft:#49557a; --line:#c9d0dc;
+  --accent-base:#2f4a86; --accent:var(--accent-base); --on-accent:#ffffff;
+  --brass-base:#b8862b; --brass:var(--brass-base);
+  --slab:"Zilla Slab","Rockwell","Roboto Slab",Georgia,serif;
+  --sans:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --wrap:1080px;
+}
+@media (prefers-color-scheme:dark){
+  :root{ --paper:#0e1730; --card:#15203f; --ink:#eef0ea; --ink-soft:#b4bdd3; --line:#2b3a63;
+    --accent:#9db2e6; --on-accent:#0e1730; --brass:#d9aa4f; }
+}
+@supports (color:color-mix(in srgb,red,blue)){
+  @media (prefers-color-scheme:dark){
+    :root{ --accent:color-mix(in srgb,var(--accent-base) 38%,#ffffff); --brass:color-mix(in srgb,var(--brass-base) 70%,#ffffff); }
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--sans)}
+a{color:inherit}
+img{max-width:100%}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:8px 12px;z-index:10}
+.skip:focus{left:8px}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px;border-radius:2px}
+
+.demo-note{background:#f4d98b;color:#3a2a00;text-align:center;padding:8px 16px;font-size:.92rem}
+
+.top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px 28px;padding-top:22px;padding-bottom:22px}
+.brand{font:700 1.4rem/1.1 var(--slab);text-decoration:none;letter-spacing:.005em}
+.nav{display:flex;flex-wrap:wrap;gap:6px 22px}
+.nav a{font-weight:500;font-size:.95rem;text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
+.nav a:hover{border-color:var(--brass)}
+
+.hero{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:24px 48px;align-items:center;padding-top:36px;padding-bottom:60px}
+.hero h1{font:700 clamp(2.5rem,6.4vw,4.6rem)/1 var(--slab);letter-spacing:-.012em;margin:0 0 20px;max-width:13ch}
+.lede{font-size:1.2rem;color:var(--ink-soft);max-width:48ch;margin:0 0 28px}
+.tag{width:min(100%,250px);justify-self:center;height:auto;overflow:visible}
+.tag-body{fill:var(--card);stroke:var(--ink);stroke-width:3;stroke-linejoin:round}
+.tag-stitch{fill:none;stroke:var(--brass);stroke-width:2;stroke-dasharray:6 5}
+.tag-string{fill:none;stroke:var(--ink-soft);stroke-width:2.5;stroke-linecap:round}
+.tag-hole{fill:var(--paper);stroke:var(--ink);stroke-width:2.5}
+.tag-text{font:700 26px var(--slab);fill:var(--ink);text-anchor:middle}
+.swing{transform-origin:110px 66px;animation:swing 2.6s cubic-bezier(.3,.6,.4,1) .2s 1 both}
+@keyframes swing{0%{transform:rotate(9deg)}22%{transform:rotate(-6deg)}44%{transform:rotate(3.5deg)}66%{transform:rotate(-1.8deg)}100%{transform:rotate(0)}}
+@media (prefers-reduced-motion:reduce){.swing{animation:none}}
+
+.btn{display:inline-block;background:var(--accent);color:var(--on-accent);padding:10px 16px;border-radius:4px;font-weight:600;font-size:.98rem;text-decoration:none;border:0;cursor:pointer}
+.btn:hover{filter:brightness(1.08)}
+
+.sec{padding:8px 0 56px}
+.sec-h{display:flex;align-items:baseline;justify-content:space-between;gap:16px;border-top:2px dashed var(--brass);padding-top:18px;margin:0 0 8px}
+.sec-h h2{font:700 1.9rem/1.15 var(--slab);margin:0}
+.sec-h p{margin:0;color:var(--ink-soft);font-size:.95rem}
+
+.rows{list-style:none;margin:0;padding:0}
+.row a{display:grid;grid-template-columns:1fr auto;gap:4px 20px;align-items:baseline;padding:18px 4px;border-bottom:1px solid var(--line);text-decoration:none}
+.row a:hover{background:var(--card)}
+.row h3{font:600 1.45rem/1.2 var(--slab);margin:0}
+.row p{grid-column:1;margin:2px 0 0;color:var(--ink-soft);max-width:60ch}
+.row .count{grid-column:2;grid-row:1;color:var(--ink-soft);font-size:.9rem;white-space:nowrap}
+
+.picks{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.pick{display:grid;grid-template-columns:88px minmax(0,1fr);gap:16px;padding:16px;background:var(--card);border:1px solid var(--line);border-radius:6px}
+.pick-media{width:88px;height:88px;border-radius:4px;overflow:hidden}
+.pick-media img{width:100%;height:100%;object-fit:cover;display:block}
+.mono{display:grid;place-items:center;width:100%;height:100%;background:var(--accent);color:var(--on-accent);font:700 2.2rem var(--slab)}
+.pick h3{font:600 1.18rem/1.25 var(--slab);margin:0 0 6px}
+.pick p{margin:0 0 8px;color:var(--ink-soft);font-size:.96rem}
+.pick .meta{font-size:.82rem;margin:0 0 10px}
+.badge{display:inline-block;border:1px solid var(--brass);border-radius:3px;padding:0 8px;font-size:.8rem;margin:0 0 8px}
+.soon{font-size:.9rem;color:var(--ink-soft)}
+
+.article{padding-top:24px;padding-bottom:64px}
+.article h1{font:700 clamp(2rem,5vw,3.1rem)/1.08 var(--slab);margin:10px 0 18px;letter-spacing:-.01em}
+.article p{max-width:68ch}
+.crumb{font-size:.92rem;color:var(--ink-soft)}
+.empty,.notice{max-width:62ch;color:var(--ink-soft)}
+.notice h1{color:var(--ink);font:700 1.9rem/1.15 var(--slab)}
+
+.foot{border-top:2px dashed var(--brass);padding:28px 0 56px;color:var(--ink-soft);font-size:.92rem}
+.foot p{max-width:70ch;margin:0 0 10px}
+.foot nav{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:14px}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;padding-bottom:40px}
+  .tag{justify-self:start;width:170px}
+  .picks{grid-template-columns:1fr}
+  .sec-h{flex-direction:column;gap:4px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div id="demo"></div>
+<header><div class="wrap top" id="top"></div></header>
+<main id="main" tabindex="-1">
+  <div id="app"><p class="wrap">Loading&hellip;</p></div>
+  <noscript><p class="wrap">This site needs JavaScript turned on to show its content.</p></noscript>
+</main>
+<footer class="foot" id="foot"></footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ------------------------------------------------------------------
+     STEP: paste your Google Sheet "Publish to web" CSV link between the
+     quotes below. Leave it empty to see demo content.
+     ------------------------------------------------------------------ */
+  var SHEET_CSV_URL = '';
+
+  var CACHE_KEY = 'site_csv_cache_v1';
+
+  var DEFAULTS = {
+    site_name: 'Buy Once Home & Office',
+    tagline: 'Durable home and office picks, chosen to last for years.',
+    hero_title: 'Buy it once. Use it for years.',
+    hero_text: 'Desks, chairs, storage and small tools that hold up, picked so you spend less over time.',
+    cta_text: 'Browse by room',
+    tag_text: 'Buy once.|Keep it.',
+    disclosure: 'Some links on this site are affiliate links. If you buy through them, we may earn a commission at no extra cost to you.',
+    amazon_statement: '',
+    affiliate_label: 'Affiliate link',
+    footer_text: '',
+    contact_email: '',
+    pinterest_url: '',
+    accent: '',
+    accent2: ''
+  };
+
+  /* General privacy text used when the sheet has no "page,privacy" row.
+     Check that it matches what your site really does, and update it if you add analytics, forms or cookies. */
+  var DEFAULT_PRIVACY = `This is a simple information site. It has no accounts, no comment forms and no newsletter sign-up, and we do not knowingly collect personal information from visitors.
+
+Hosting and technical data. The site is hosted by Cloudflare. Like most hosts, it may process basic technical data, such as your IP address and browser type, to deliver pages and keep the site secure. We do not use that data to identify you.
+
+Cookies and analytics. We do not set cookies or run analytics on this site. If that changes, we will update this page first.
+
+Google services. Page content and fonts are loaded from Google, so Google may see those requests when you open a page.
+
+Affiliate links. Some links lead to retailers such as Amazon. If you click a link and buy, the retailer may use cookies to credit us with a commission at no extra cost to you. Each retailer has its own privacy policy, and we do not control how they handle your data.
+
+Changes. We may update this page. Last updated: October 2026.{contact}`;
+
+  var DEMO_CSV = [
+    'type,group,title,text,url,image,badge',
+    'category,home-office,Home office,Chairs and desks for long working days.,,,',
+    'category,desk-gadgets,Desk gadgets and organizers,Small tools that keep a desk tidy.,,,',
+    'category,storage,Storage and organization,Shelves and boxes that hold up to daily use.,,,',
+    'guide,desk-setup-ideas,Desk setup ideas built to last,A short guide to the pieces worth buying once.,,,',
+    'product,"home-office,desk-setup-ideas",Example: adjustable desk chair,Placeholder text. Replace it with why this lasts: materials and warranty length.,,,Example',
+    'product,"home-office,desk-setup-ideas",Example: standing desk frame,Placeholder text. Replace it with what you checked before recommending it.,,,Example',
+    'product,"desk-gadgets,desk-setup-ideas",Example: cable organizer,Placeholder text. Replace it with a plain reason to buy it.,,,',
+    'product,storage,Example: wall shelf,Placeholder text. Replace it with the load rating and warranty terms.,,,'
+  ].join('\n');
+
+  var S = null;
+  var demo = false;
+  var first = true;
+
+  /* ---------- helpers ---------- */
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function paras(t) {
+    if (!t) return '';
+    return String(t).split(/\n\s*\n/).map(function (p) {
+      return '<p>' + esc(p.trim()).replace(/\n/g, '<br>') + '</p>';
+    }).join('');
+  }
+  function safeUrl(u) {
+    u = (u || '').trim();
+    if (!u) return '';
+    try {
+      var x = new URL(u);
+      return (x.protocol === 'http:' || x.protocol === 'https:') ? x.href : '';
+    } catch (e) { return ''; }
+  }
+  function host(u) {
+    try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return ''; }
+  }
+  function set(k) {
+    var v = S && S.settings[k];
+    return (v != null && v !== '') ? v : (DEFAULTS[k] || '');
+  }
+  function find(list, slug) {
+    for (var i = 0; i < list.length; i++) if (list[i].slug === slug) return list[i];
+    return null;
+  }
+  function inGroup(p, slug) { return p.groups.indexOf(slug) !== -1; }
+
+  /* ---------- CSV ---------- */
+  function parseCSV(text) {
+    text = String(text).replace(/^\uFEFF/, '');
+    var rows = [], row = [], field = '', inQ = false;
+    for (var i = 0; i < text.length; i++) {
+      var c = text[i];
+      if (inQ) {
+        if (c === '"') {
+          if (text[i + 1] === '"') { field += '"'; i++; } else { inQ = false; }
+        } else { field += c; }
+      } else {
+        if (c === '"') { inQ = true; }
+        else if (c === ',') { row.push(field); field = ''; }
+        else if (c === '\n') { row.push(field); rows.push(row); row = []; field = ''; }
+        else if (c === '\r') { /* skip */ }
+        else { field += c; }
+      }
+    }
+    if (field.length || row.length) { row.push(field); rows.push(row); }
+    return rows;
+  }
+
+  function emptyData() {
+    return { settings: {}, categories: [], guides: [], products: [], pages: {} };
+  }
+
+  function build(rows) {
+    var out = emptyData();
+    if (!rows.length) return out;
+    var head = rows[0].map(function (h) { return h.trim().toLowerCase(); });
+    for (var i = 1; i < rows.length; i++) {
+      var r = {}, any = false;
+      for (var j = 0; j < head.length; j++) {
+        var v = (rows[i][j] || '').trim();
+        r[head[j]] = v;
+        if (v) any = true;
+      }
+      if (!any) continue;
+      var t = (r.type || '').toLowerCase();
+      if (!t || t.charAt(0) === '#') continue;
+      var g = (r.group || '').toLowerCase();
+      if (t === 'setting') {
+        if (g) out.settings[g] = r.text || '';
+      } else if (t === 'category') {
+        if (g) out.categories.push({ slug: g, title: r.title || g, text: r.text || '' });
+      } else if (t === 'guide') {
+        if (g) out.guides.push({ slug: g, title: r.title || g, text: r.text || '' });
+      } else if (t === 'product') {
+        if (r.title) out.products.push({
+          groups: g.split(/\s*,\s*/).filter(Boolean),
+          title: r.title, text: r.text || '', url: r.url || '', image: r.image || '', badge: r.badge || ''
+        });
+      } else if (t === 'page') {
+        if (g) out.pages[g] = { title: r.title || g, text: r.text || '' };
+      }
+    }
+    return out;
+  }
+
+  /* ---------- views ---------- */
+  function tagSvg(text) {
+    var lines = String(text || '').split('|').map(function (s) { return s.trim(); }).filter(Boolean).slice(0, 4);
+    if (!lines.length) lines = ['Buy once.'];
+    var n = lines.length, spans = '';
+    for (var i = 0; i < n; i++) {
+      var y = 185 + (i - (n - 1) / 2) * 36 + 9;
+      spans += '<text class="tag-text" x="110" y="' + y + '">' + esc(lines[i]) + '</text>';
+    }
+    return '<svg class="tag" viewBox="0 0 220 320" role="img" aria-label="' + esc(lines.join(' ')) + '">' +
+      '<g class="swing">' +
+      '<path class="tag-string" d="M110 66 C104 40 118 20 112 0"/>' +
+      '<path class="tag-body" d="M64 46 H156 L192 82 V286 a8 8 0 0 1 -8 8 H36 a8 8 0 0 1 -8 -8 V82 Z"/>' +
+      '<circle class="tag-hole" cx="110" cy="66" r="7"/>' +
+      '<path class="tag-stitch" d="M40 100 H180 V274 H40 Z"/>' +
+      spans + '</g></svg>';
+  }
+
+  function pickItem(p) {
+    var img = safeUrl(p.image), url = safeUrl(p.url);
+    var media = img
+      ? '<img src="' + esc(img) + '" alt="' + esc(p.title) + '" loading="lazy">'
+      : '<span class="mono" aria-hidden="true">' + esc(p.title.charAt(0).toUpperCase()) + '</span>';
+    var badge = p.badge ? '<span class="badge">' + esc(p.badge) + '</span>' : '';
+    var action = url
+      ? '<p class="meta">' + esc(set('affiliate_label')) + '</p><a class="btn" href="' + esc(url) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">See it at ' + esc(host(url)) + '</a>'
+      : '<span class="soon">Link coming soon</span>';
+    return '<li class="pick"><div class="pick-media">' + media + '</div><div class="pick-body">' +
+      '<h3>' + esc(p.title) + '</h3>' + badge + (p.text ? '<p>' + esc(p.text) + '</p>' : '') + action + '</div></li>';
+  }
+
+  function picksList(list) {
+    return '<ul class="picks">' + list.map(pickItem).join('') + '</ul>';
+  }
+
+  function viewHome() {
+    var h = '<section class="wrap hero"><div><h1>' + esc(set('hero_title')) + '</h1>' +
+      '<p class="lede">' + esc(set('hero_text')) + '</p>' +
+      '<a class="btn" href="#/" data-scroll="rooms">' + esc(set('cta_text')) + '</a></div>' +
+      tagSvg(set('tag_text')) + '</section>';
+
+    if (S.categories.length) {
+      h += '<section class="wrap sec" id="rooms"><div class="sec-h"><h2>Browse by room</h2></div><ul class="rows">' +
+        S.categories.map(function (c) {
+          var n = S.products.filter(function (p) { return inGroup(p, c.slug); }).length;
+          return '<li class="row"><a href="#/c/' + encodeURIComponent(c.slug) + '"><h3>' + esc(c.title) + '</h3>' +
+            '<span class="count">' + n + (n === 1 ? ' pick' : ' picks') + '</span>' +
+            (c.text ? '<p>' + esc(c.text) + '</p>' : '') + '</a></li>';
+        }).join('') + '</ul></section>';
+    }
+
+    if (S.guides.length) {
+      h += '<section class="wrap sec"><div class="sec-h"><h2>Guides</h2></div><ul class="rows">' +
+        S.guides.map(function (g) {
+          return '<li class="row"><a href="#/g/' + encodeURIComponent(g.slug) + '"><h3>' + esc(g.title) + '</h3>' +
+            (g.text ? '<p>' + esc(g.text) + '</p>' : '') + '</a></li>';
+        }).join('') + '</ul></section>';
+    }
+
+    var featured = S.products.filter(function (p) { return p.badge; }).slice(0, 6);
+    if (!featured.length) featured = S.products.slice(0, 6);
+    if (featured.length) {
+      h += '<section class="wrap sec"><div class="sec-h"><h2>Top picks</h2></div>' + picksList(featured) + '</section>';
+    }
+    return h;
+  }
+
+  function viewGroup(item, kind) {
+    var list = S.products.filter(function (p) { return inGroup(p, item.slug); });
+    return '<section class="wrap article"><a class="crumb" href="#/">Home</a><h1>' + esc(item.title) + '</h1>' +
+      paras(item.text) +
+      (list.length ? picksList(list) : '<p class="empty">No picks here yet. Check back soon.</p>') +
+      '</section>';
+  }
+
+  function privacyText() {
+    var mail = set('contact_email');
+    return DEFAULT_PRIVACY.replace('{contact}', mail ? '\n\nQuestions about this page: ' + mail + '.' : '');
+  }
+
+  function viewPage(slug) {
+    var p = S.pages[slug];
+    if (!p && slug === 'privacy') p = { title: 'Privacy policy', text: privacyText() };
+    if (!p) return null;
+    return { title: p.title, html: '<section class="wrap article"><a class="crumb" href="#/">Home</a><h1>' + esc(p.title) + '</h1>' + paras(p.text) + '</section>' };
+  }
+
+  function notFound() {
+    return '<section class="wrap article"><h1>That page does not exist</h1><p><a href="#/">Go to the home page</a> to find what you need.</p></section>';
+  }
+
+  /* ---------- chrome ---------- */
+  function renderChrome() {
+    var links = S.categories.slice(0, 4).map(function (c) {
+      return '<a href="#/c/' + encodeURIComponent(c.slug) + '">' + esc(c.title) + '</a>';
+    });
+    if (S.pages.about) links.push('<a href="#/p/about">' + esc(S.pages.about.title) + '</a>');
+    document.getElementById('top').innerHTML =
+      '<a class="brand" href="#/">' + esc(set('site_name')) + '</a><nav class="nav" aria-label="Main">' + links.join('') + '</nav>';
+
+    var keys = Object.keys(S.pages);
+    if (keys.indexOf('privacy') === -1) keys.push('privacy');
+    var fl = keys.map(function (k) {
+      var t = S.pages[k] ? S.pages[k].title : 'Privacy policy';
+      return '<a href="#/p/' + encodeURIComponent(k) + '">' + esc(t) + '</a>';
+    });
+    var pin = safeUrl(set('pinterest_url'));
+    if (pin) fl.push('<a href="' + esc(pin) + '" rel="noopener noreferrer">Pinterest</a>');
+    var mail = set('contact_email');
+    if (mail) fl.push('<a href="mailto:' + esc(mail) + '">Contact</a>');
+
+    document.getElementById('foot').innerHTML = '<div class="wrap">' +
+      '<p>' + esc(set('disclosure')) + '</p>' +
+      (set('amazon_statement') ? '<p>' + esc(set('amazon_statement')) + '</p>' : '') +
+      (set('footer_text') ? '<p>' + esc(set('footer_text')) + '</p>' : '') +
+      '<p>&copy; ' + new Date().getFullYear() + ' ' + esc(set('site_name')) + '</p>' +
+      '<nav aria-label="Footer">' + fl.join('') + '</nav></div>';
+
+    document.getElementById('demo').innerHTML = demo
+      ? '<div class="demo-note">Demo content. Paste your Google Sheet link into SHEET_CSV_URL in index.html to replace it.</div>' : '';
+  }
+
+  function applyTheme() {
+    var re = /^#[0-9a-f]{3,8}$/i, r = document.documentElement;
+    if (re.test(set('accent'))) r.style.setProperty('--accent-base', set('accent'));
+    if (re.test(set('accent2'))) r.style.setProperty('--brass-base', set('accent2'));
+    var m = document.querySelector('meta[name="description"]');
+    if (m) m.setAttribute('content', set('tagline'));
+  }
+
+  /* ---------- router ---------- */
+  function render() {
+    var h = location.hash.replace(/^#\/?/, '');
+    var parts = h.split('/');
+    var kind = parts[0], slug = '';
+    try { slug = decodeURIComponent(parts[1] || '').toLowerCase(); } catch (e) { slug = ''; }
+    var html, title = set('site_name');
+
+    if (!kind) {
+      html = viewHome();
+    } else if (kind === 'c') {
+      var c = find(S.categories, slug);
+      html = c ? viewGroup(c) : notFound();
+      if (c) title = c.title + ' | ' + title;
+    } else if (kind === 'g') {
+      var g = find(S.guides, slug);
+      html = g ? viewGroup(g) : notFound();
+      if (g) title = g.title + ' | ' + title;
+    } else if (kind === 'p') {
+      var p = viewPage(slug);
+      html = p ? p.html : notFound();
+      if (p) title = p.title + ' | ' + title;
+    } else {
+      html = notFound();
+    }
+
+    document.getElementById('app').innerHTML = html;
+    document.title = title;
+    renderChrome();
+    if (!first) {
+      window.scrollTo(0, 0);
+      document.getElementById('main').focus({ preventScroll: true });
+    }
+    first = false;
+  }
+
+  function start() { applyTheme(); render(); }
+
+  function showError() {
+    S = emptyData();
+    renderChrome();
+    document.getElementById('app').innerHTML =
+      '<section class="wrap article notice"><h1>We could not load this page&rsquo;s content</h1>' +
+      '<p>Refresh the page in a minute. If it keeps happening, the site owner needs to check that the Google Sheet is published to the web.</p></section>';
+  }
+
+  /* ---------- load ---------- */
+  function readCache() {
+    try { return localStorage.getItem(CACHE_KEY); } catch (e) { return null; }
+  }
+  function writeCache(t) {
+    try { localStorage.setItem(CACHE_KEY, t); } catch (e) { /* ignore */ }
+  }
+
+  function load() {
+    if (!SHEET_CSV_URL) {
+      demo = true;
+      S = build(parseCSV(DEMO_CSV));
+      start();
+      return;
+    }
+    var cached = readCache(), shown = false;
+    if (cached) {
+      try { S = build(parseCSV(cached)); start(); shown = true; } catch (e) { shown = false; }
+    }
+    fetch(SHEET_CSV_URL, { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
+      .then(function (t) {
+        var rows = parseCSV(t);
+        if (rows.length < 2) throw new Error('Empty sheet');
+        writeCache(t);
+        S = build(rows);
+        start();
+      })
+      .catch(function () { if (!shown) showError(); });
+  }
+
+  window.addEventListener('hashchange', function () { if (S) render(); });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('[data-scroll]');
+    if (!a) return;
+    e.preventDefault();
+    var el = document.getElementById(a.getAttribute('data-scroll'));
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (el) el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+  });
+
+  load();
+})();
+</script>
+</body>
+</html>
